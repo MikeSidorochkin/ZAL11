@@ -1,0 +1,2193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZAL11</NAME>
+    <SUBC>1</SUBC>
+    <RSTAT>K</RSTAT>
+    <RLOAD>F</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>ZAL11</PROGRAM>
+      <SCREEN>0100</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Main screen</DESCRIPT>
+      <TYPE>N</TYPE>
+      <NEXTSCREEN>0100</NEXTSCREEN>
+      <LINES>080</LINES>
+      <COLUMNS>255</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+      <RPY_DYCATT>
+       <TYPE>CUST_CTRL</TYPE>
+       <NAME>CUSTCONT</NAME>
+       <ELEMENT_OF>SCREEN</ELEMENT_OF>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>255</LENGTH>
+       <HEIGHT>080</HEIGHT>
+       <C_RESIZE_V>X</C_RESIZE_V>
+       <C_RESIZE_H>X</C_RESIZE_H>
+       <C_LINE_MIN>010</C_LINE_MIN>
+       <C_COLN_MIN>030</C_COLN_MIN>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <NAME>W_OKCODE</NAME>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>MODULE status_0100.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>MODULE exit_command_0100 AT EXIT-COMMAND.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*  MODULE user_command_0100.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+     <SPACES>
+      <item>0</item>
+      <item>2</item>
+      <item>0</item>
+      <item>0</item>
+      <item>2</item>
+      <item>0</item>
+     </SPACES>
+    </item>
+    <item>
+     <HEADER>
+      <PROGRAM>ZAL11</PROGRAM>
+      <SCREEN>0200</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Properties box</DESCRIPT>
+      <TYPE>M</TYPE>
+      <NEXTSCREEN>0200</NEXTSCREEN>
+      <LINES>027</LINES>
+      <COLUMNS>120</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+      <RPY_DYCATT>
+       <TYPE>CUST_CTRL</TYPE>
+       <NAME>CUSTCONT2</NAME>
+       <ELEMENT_OF>SCREEN</ELEMENT_OF>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>120</LENGTH>
+       <HEIGHT>027</HEIGHT>
+       <C_RESIZE_V>X</C_RESIZE_V>
+       <C_RESIZE_H>X</C_RESIZE_H>
+       <C_LINE_MIN>002</C_LINE_MIN>
+       <C_COLN_MIN>002</C_COLN_MIN>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <NAME>W_OKCODE</NAME>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>MODULE STATUS_0200.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>MODULE USER_COMMAND_0200.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+     <SPACES>
+      <item>0</item>
+      <item>1</item>
+      <item>0</item>
+      <item>0</item>
+      <item>1</item>
+     </SPACES>
+    </item>
+   </DYNPROS>
+   <CUA>
+    <ADM>
+     <PFKCODE>000001</PFKCODE>
+    </ADM>
+    <STA>
+     <RSMPE_STAT>
+      <CODE>SCREEN100</CODE>
+      <MODAL>D</MODAL>
+      <ACTCODE>000001</ACTCODE>
+      <PFKCODE>000001</PFKCODE>
+      <BUTCODE>0001</BUTCODE>
+      <INT_NOTE>Standard status</INT_NOTE>
+     </RSMPE_STAT>
+     <RSMPE_STAT>
+      <CODE>SCREEN200</CODE>
+      <MODAL>P</MODAL>
+      <PFKCODE>000001</PFKCODE>
+      <BUTCODE>0001</BUTCODE>
+      <INT_NOTE>CHMOD</INT_NOTE>
+     </RSMPE_STAT>
+    </STA>
+    <FUN>
+     <RSMPE_FUNT>
+      <CODE>CLOSE</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <ICON_ID>@0W@</ICON_ID>
+      <FUN_TEXT>Interrupt</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>EXIT</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TYPE>E</TYPE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Return</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>EXIT</CODE>
+      <TEXTNO>002</TEXTNO>
+      <TYPE>E</TYPE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Cancel</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>EXIT</CODE>
+      <TEXTNO>003</TEXTNO>
+      <TYPE>E</TYPE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_CANCEL</TEXT_NAME>
+      <ICON_ID>@0W@</ICON_ID>
+      <FUN_TEXT>Interrupt</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>OK</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_OKAY</TEXT_NAME>
+      <ICON_ID>@0V@</ICON_ID>
+      <FUN_TEXT>Continue</FUN_TEXT>
+     </RSMPE_FUNT>
+    </FUN>
+    <BUT>
+     <RSMPE_BUT>
+      <PFK_CODE>000001</PFK_CODE>
+      <CODE>0001</CODE>
+      <NO>01</NO>
+      <PFNO>00</PFNO>
+     </RSMPE_BUT>
+     <RSMPE_BUT>
+      <PFK_CODE>000001</PFK_CODE>
+      <CODE>0001</CODE>
+      <NO>02</NO>
+      <PFNO>12</PFNO>
+     </RSMPE_BUT>
+    </BUT>
+    <PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>00</PFNO>
+      <FUNCODE>OK</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>03</PFNO>
+      <FUNCODE>EXIT</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>12</PFNO>
+      <FUNCODE>CLOSE</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>15</PFNO>
+      <FUNCODE>EXIT</FUNCODE>
+      <FUNNO>002</FUNNO>
+     </RSMPE_PFK>
+    </PFK>
+    <SET>
+     <RSMPE_STAF>
+      <STATUS>SCREEN100</STATUS>
+      <FUNCTION>EXIT</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>SCREEN200</STATUS>
+      <FUNCTION>CLOSE</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>SCREEN200</STATUS>
+      <FUNCTION>OK</FUNCTION>
+     </RSMPE_STAF>
+    </SET>
+    <DOC>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>A</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>Standard status</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>P</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <MODAL>P</MODAL>
+      <INT_NOTE>CHMOD</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>B</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <SUB_CODE>0001</SUB_CODE>
+      <MODAL>P</MODAL>
+      <INT_NOTE>CHMOD</INT_NOTE>
+     </RSMPE_ATRT>
+    </DOC>
+    <TIT>
+     <RSMPE_TITT>
+      <CODE>TITLE100</CODE>
+      <TEXT>ABAP FTP</TEXT>
+     </RSMPE_TITT>
+     <RSMPE_TITT>
+      <CODE>TITLE200</CODE>
+      <TEXT>Change Attributes</TEXT>
+     </RSMPE_TITT>
+    </TIT>
+   </CUA>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>C01</KEY>
+     <ENTRY>Local PC</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C02</KEY>
+     <ENTRY>Local Disk (#:)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C03</KEY>
+     <ENTRY>CDROM Drive (#:)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C04</KEY>
+     <ENTRY>Remote Drive (#:)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C05</KEY>
+     <ENTRY>Removable Drive (#:)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C06</KEY>
+     <ENTRY>Unknown (#:)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C07</KEY>
+     <ENTRY>Directory</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C08</KEY>
+     <ENTRY>Text Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C09</KEY>
+     <ENTRY>Configuration Settings</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C10</KEY>
+     <ENTRY>SAP GUI Shortcut</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C11</KEY>
+     <ENTRY>CFG File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C12</KEY>
+     <ENTRY>Log File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C13</KEY>
+     <ENTRY>MS Word Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C14</KEY>
+     <ENTRY>Internet Document Set</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C15</KEY>
+     <ENTRY>Setup Information</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C16</KEY>
+     <ENTRY>HTML Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C17</KEY>
+     <ENTRY>HyperText Template</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C18</KEY>
+     <ENTRY>Internet Shortcut</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C19</KEY>
+     <ENTRY>XML Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C20</KEY>
+     <ENTRY>Help File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C21</KEY>
+     <ENTRY>System file</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C22</KEY>
+     <ENTRY>Windows Command Script</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C23</KEY>
+     <ENTRY>Security Catalog</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C24</KEY>
+     <ENTRY>Application Extension</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C25</KEY>
+     <ENTRY>Device driver</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C26</KEY>
+     <ENTRY>TrueType Font</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C27</KEY>
+     <ENTRY>OLD File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C28</KEY>
+     <ENTRY>PKCS Certificates</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C29</KEY>
+     <ENTRY>Application</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C30</KEY>
+     <ENTRY>MS-DOS Batch File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C31</KEY>
+     <ENTRY>MS PowerPoint Presentation</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C32</KEY>
+     <ENTRY>MS Word Template</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C33</KEY>
+     <ENTRY>Outlook Mail Message</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C34</KEY>
+     <ENTRY>Rich Text Format</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C35</KEY>
+     <ENTRY>Adobe Acrobat Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C36</KEY>
+     <ENTRY>TIF Image Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C37</KEY>
+     <ENTRY>Icon</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C38</KEY>
+     <ENTRY>GIF Image</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C39</KEY>
+     <ENTRY>Write Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C40</KEY>
+     <ENTRY>OTF Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C41</KEY>
+     <ENTRY>MS Visio Document</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C42</KEY>
+     <ENTRY>Bitmap Image</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C43</KEY>
+     <ENTRY>PNG Image</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C44</KEY>
+     <ENTRY>MS Excel Worksheet</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C45</KEY>
+     <ENTRY>MS Excel CSV</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C46</KEY>
+     <ENTRY>JPEG Image</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C47</KEY>
+     <ENTRY>Compressed Folder</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C48</KEY>
+     <ENTRY>Video Clip</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C49</KEY>
+     <ENTRY>Wave Sound</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C50</KEY>
+     <ENTRY>AU Format Sound</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C51</KEY>
+     <ENTRY>MP3 Format Sound</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C52</KEY>
+     <ENTRY>Executable Jar File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C53</KEY>
+     <ENTRY>BAK File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C54</KEY>
+     <ENTRY># File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C55</KEY>
+     <ENTRY>Trash bin</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>C56</KEY>
+     <ENTRY>Directory Parameters</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E01</KEY>
+     <ENTRY>Please choose a remote file to download</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E02</KEY>
+     <ENTRY>Cannot find target...</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E03</KEY>
+     <ENTRY>Please choose a local file to upload</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E04</KEY>
+     <ENTRY>Error when calculate target...</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E05</KEY>
+     <ENTRY>Please choose a remote item</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E06</KEY>
+     <ENTRY>Please choose a local item</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E07</KEY>
+     <ENTRY>Cannot read tmp directory</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E08</KEY>
+     <ENTRY>Please choose a local folder to download</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E09</KEY>
+     <ENTRY>Cannot read remote file</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E10</KEY>
+     <ENTRY>Please choose a remote folder to upload</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E11</KEY>
+     <ENTRY>Cannot create local file</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E12</KEY>
+     <ENTRY>Action cancelled</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E14</KEY>
+     <ENTRY>Clipboard content is not a valid path</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E15</KEY>
+     <ENTRY>Too many copy exists. Delete or rename old copies</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E16</KEY>
+     <ENTRY>Forbidden character, operation cancelled</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E17</KEY>
+     <ENTRY>Remote file already exist, cannot upload</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E18</KEY>
+     <ENTRY>Cannot read local file</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E19</KEY>
+     <ENTRY>Cannot create remote file</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E20</KEY>
+     <ENTRY>Please choose a local file/folder to upload</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E21</KEY>
+     <ENTRY>You are not allowed to perform this action</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E22</KEY>
+     <ENTRY>This shortcut already exists</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E24</KEY>
+     <ENTRY>Please allow SAP to access to your local files</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E25</KEY>
+     <ENTRY>There is no shortcut to delete</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E26</KEY>
+     <ENTRY>Uncompression not yet managed</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E27</KEY>
+     <ENTRY>Cannot open the local file/folder</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H01</KEY>
+     <ENTRY>Path</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H02</KEY>
+     <ENTRY>FileName</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H03</KEY>
+     <ENTRY>Icon</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H04</KEY>
+     <ENTRY>FileType</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H05</KEY>
+     <ENTRY>Size</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H06</KEY>
+     <ENTRY>Creation Date</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H07</KEY>
+     <ENTRY>Creation Time</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H08</KEY>
+     <ENTRY>Modification Date</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H09</KEY>
+     <ENTRY>Modification Time</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H10</KEY>
+     <ENTRY>Access Date</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H11</KEY>
+     <ENTRY>Access Time</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H12</KEY>
+     <ENTRY>Mode</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H13</KEY>
+     <ENTRY>Read</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H14</KEY>
+     <ENTRY>Write</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H15</KEY>
+     <ENTRY>Execute</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H16</KEY>
+     <ENTRY>Property</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H17</KEY>
+     <ENTRY>Value</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H18</KEY>
+     <ENTRY>Owner</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H19</KEY>
+     <ENTRY>File group</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H20</KEY>
+     <ENTRY>Others</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H21</KEY>
+     <ENTRY>Attributes</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H22</KEY>
+     <ENTRY>Path</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H23</KEY>
+     <ENTRY>File Attributes</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H24</KEY>
+     <ENTRY>Read-Only</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H25</KEY>
+     <ENTRY>Archive</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H26</KEY>
+     <ENTRY>System File</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H27</KEY>
+     <ENTRY>Hidden File</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H28</KEY>
+     <ENTRY>Not Content Indexed</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H29</KEY>
+     <ENTRY>Compressed</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H30</KEY>
+     <ENTRY>Offline</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H31</KEY>
+     <ENTRY>newfolder</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H32</KEY>
+     <ENTRY>Desktop</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H33</KEY>
+     <ENTRY>My Documents</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H34</KEY>
+     <ENTRY>Description</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H35</KEY>
+     <ENTRY>Selection</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H36</KEY>
+     <ENTRY>Name</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H37</KEY>
+     <ENTRY>Path</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M01</KEY>
+     <ENTRY>Open</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M02</KEY>
+     <ENTRY>Open folder in Explorer</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M03</KEY>
+     <ENTRY>Copy path to clipboard</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M04</KEY>
+     <ENTRY>Open as text</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M05</KEY>
+     <ENTRY>Compress</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M06</KEY>
+     <ENTRY>Rename File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M07</KEY>
+     <ENTRY>Duplicate File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M08</KEY>
+     <ENTRY>Delete File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M09</KEY>
+     <ENTRY>Rename Folder</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M10</KEY>
+     <ENTRY>Duplicate Folder</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M11</KEY>
+     <ENTRY>Delete Folder</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M12</KEY>
+     <ENTRY>Uncompress</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M13</KEY>
+     <ENTRY>Transfer Mode</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M14</KEY>
+     <ENTRY>Choose Transfer Mode (Auto/asc/bin)</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M15</KEY>
+     <ENTRY>Refresh</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M16</KEY>
+     <ENTRY>Refresh current folder</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M17</KEY>
+     <ENTRY>Shortcuts</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M18</KEY>
+     <ENTRY>Open path from clipboard</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M19</KEY>
+     <ENTRY>Create folder</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M20</KEY>
+     <ENTRY>Download</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M21</KEY>
+     <ENTRY>Upload</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M22</KEY>
+     <ENTRY>Auto</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M23</KEY>
+     <ENTRY>Ascii (text mode)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M24</KEY>
+     <ENTRY>Binary mode</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M25</KEY>
+     <ENTRY>Change Attributes</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M26</KEY>
+     <ENTRY>Display Attributes</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M27</KEY>
+     <ENTRY>Create shortcut</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M28</KEY>
+     <ENTRY>Folders size</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M29</KEY>
+     <ENTRY>Remember server connexion</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M30</KEY>
+     <ENTRY>Forget server connexion</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M31</KEY>
+     <ENTRY>files</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M32</KEY>
+     <ENTRY>Delete shortcut</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M33</KEY>
+     <ENTRY>Grid options</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>M34</KEY>
+     <ENTRY>Open as...</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T01</KEY>
+     <ENTRY>Copy # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T02</KEY>
+     <ENTRY>Move # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T03</KEY>
+     <ENTRY>Uncompress # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T04</KEY>
+     <ENTRY>Upload # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T05</KEY>
+     <ENTRY>Rename # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T06</KEY>
+     <ENTRY>Enter new name</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T07</KEY>
+     <ENTRY>Duplicate # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T08</KEY>
+     <ENTRY>Path sent to clipbard</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T09</KEY>
+     <ENTRY>Create folder # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T10</KEY>
+     <ENTRY>Warning : critical operation</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T11</KEY>
+     <ENTRY>Delete folder # and all there content ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T12</KEY>
+     <ENTRY>Delete file # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T13</KEY>
+     <ENTRY>Compress # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T14</KEY>
+     <ENTRY>Download # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T15</KEY>
+     <ENTRY>Enter name and server path</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T16</KEY>
+     <ENTRY>Shortcut created</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T17</KEY>
+     <ENTRY>Change CHMOD for file # from # to # ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T18</KEY>
+     <ENTRY># already exist in #. Overwrite ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T19</KEY>
+     <ENTRY>Enter new folder name</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T20</KEY>
+     <ENTRY>Choose shortcuts to delete</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T21</KEY>
+     <ENTRY>Delete shortcut # for path # ?</ENTRY>
+     <LENGTH>100</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T22</KEY>
+     <ENTRY>File # already exists in #. Overwrite ?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T23</KEY>
+     <ENTRY>Overwrite</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T24</KEY>
+     <ENTRY>Download</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T25</KEY>
+     <ENTRY>Upload</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T26</KEY>
+     <ENTRY>Delete</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T27</KEY>
+     <ENTRY>Compress</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T28</KEY>
+     <ENTRY>Create</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T29</KEY>
+     <ENTRY>Duplicate</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T30</KEY>
+     <ENTRY>Rename</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T31</KEY>
+     <ENTRY>Uncompress</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T32</KEY>
+     <ENTRY>Copy</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T33</KEY>
+     <ENTRY>Move</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T34</KEY>
+     <ENTRY>shortcuts deleted</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T35</KEY>
+     <ENTRY>Change</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T36</KEY>
+     <ENTRY>Cancel</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>R</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>C01</KEY>
+       <ENTRY>Local PC</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C02</KEY>
+       <ENTRY>Local Disk (#:)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C03</KEY>
+       <ENTRY>CDROM Drive (#:)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C04</KEY>
+       <ENTRY>Remote Drive (#:)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C05</KEY>
+       <ENTRY>USB Drive (#:)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C06</KEY>
+       <ENTRY>Unknown (#:)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C07</KEY>
+       <ENTRY>Directory</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C08</KEY>
+       <ENTRY>Text Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C09</KEY>
+       <ENTRY>Configuration Settings</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C10</KEY>
+       <ENTRY>SAP GUI Shortcut</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C11</KEY>
+       <ENTRY>CFG File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C12</KEY>
+       <ENTRY>Log File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C13</KEY>
+       <ENTRY>MS Word Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C14</KEY>
+       <ENTRY>Internet Document Set</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C15</KEY>
+       <ENTRY>Setup Information</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C16</KEY>
+       <ENTRY>HTML Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C17</KEY>
+       <ENTRY>HyperText Template</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C18</KEY>
+       <ENTRY>Internet Shortcut</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C19</KEY>
+       <ENTRY>XML Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C20</KEY>
+       <ENTRY>Help File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C21</KEY>
+       <ENTRY>System file</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C22</KEY>
+       <ENTRY>Windows Command Script</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C23</KEY>
+       <ENTRY>Security Catalog</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C24</KEY>
+       <ENTRY>Application Extension</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C25</KEY>
+       <ENTRY>Device driver</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C26</KEY>
+       <ENTRY>TrueType Font</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C27</KEY>
+       <ENTRY>OLD File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C28</KEY>
+       <ENTRY>PKCS Certificates</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C29</KEY>
+       <ENTRY>Application</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C30</KEY>
+       <ENTRY>MS-DOS Batch File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C31</KEY>
+       <ENTRY>MS PowerPoint Presentation</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C32</KEY>
+       <ENTRY>MS Word Template</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C33</KEY>
+       <ENTRY>Outlook Mail Message</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C34</KEY>
+       <ENTRY>Rich Text Format</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C35</KEY>
+       <ENTRY>Adobe Acrobat Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C36</KEY>
+       <ENTRY>TIF Image Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C37</KEY>
+       <ENTRY>Icon</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C38</KEY>
+       <ENTRY>GIF Image</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C39</KEY>
+       <ENTRY>Write Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C40</KEY>
+       <ENTRY>OTF Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C41</KEY>
+       <ENTRY>MS Visio Document</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C42</KEY>
+       <ENTRY>Bitmap Image</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C43</KEY>
+       <ENTRY>PNG Image</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C44</KEY>
+       <ENTRY>MS Excel Worksheet</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C45</KEY>
+       <ENTRY>MS Excel CSV</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C46</KEY>
+       <ENTRY>JPEG Image</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C47</KEY>
+       <ENTRY>Compressed Folder</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C48</KEY>
+       <ENTRY>Video Clip</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C49</KEY>
+       <ENTRY>Wave Sound</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C50</KEY>
+       <ENTRY>AU Format Sound</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C51</KEY>
+       <ENTRY>MP3 Format Sound</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C52</KEY>
+       <ENTRY>Executable Jar File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C53</KEY>
+       <ENTRY>BAK File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C54</KEY>
+       <ENTRY># File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>C55</KEY>
+       <ENTRY>Trash bin</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E01</KEY>
+       <ENTRY>Please choose a remote file to download</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E02</KEY>
+       <ENTRY>Cannot find target...</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E03</KEY>
+       <ENTRY>Please choose a local file to upload</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E04</KEY>
+       <ENTRY>Error when calculate target...</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E05</KEY>
+       <ENTRY>Please choose a remote item</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E06</KEY>
+       <ENTRY>Please choose a local item</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E07</KEY>
+       <ENTRY>Cannot read tmp directory</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E08</KEY>
+       <ENTRY>Please choose a local folder to download</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E09</KEY>
+       <ENTRY>Cannot read remote file</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E10</KEY>
+       <ENTRY>Please choose a remote folder to upload</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E11</KEY>
+       <ENTRY>Cannot create local file</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E12</KEY>
+       <ENTRY>Action cancelled</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E14</KEY>
+       <ENTRY>Clipboard content is not a valid path</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E15</KEY>
+       <ENTRY>Too many copy exists. Delete or rename old copies</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E16</KEY>
+       <ENTRY>Forbidden character, operation cancelled</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E17</KEY>
+       <ENTRY>Remote file already exist, cannot upload</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E18</KEY>
+       <ENTRY>Cannot read local file</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E19</KEY>
+       <ENTRY>Cannot create remote file</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E20</KEY>
+       <ENTRY>Please choose a local file/folder to upload</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>E21</KEY>
+       <ENTRY>You are not allowed to perform this action</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H01</KEY>
+       <ENTRY>Path</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H02</KEY>
+       <ENTRY>FileName</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H03</KEY>
+       <ENTRY>Icon</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H04</KEY>
+       <ENTRY>FileType</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H05</KEY>
+       <ENTRY>Size</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H06</KEY>
+       <ENTRY>Creation Date</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H07</KEY>
+       <ENTRY>Creation Time</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H08</KEY>
+       <ENTRY>Modification Date</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H09</KEY>
+       <ENTRY>Modification Time</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H10</KEY>
+       <ENTRY>Access Date</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H11</KEY>
+       <ENTRY>Access Time</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>H12</KEY>
+       <ENTRY>Mode</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M01</KEY>
+       <ENTRY>Open</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M02</KEY>
+       <ENTRY>Open folder in Explorer</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M03</KEY>
+       <ENTRY>Copy path to clipboard</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M04</KEY>
+       <ENTRY>Open as text</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M05</KEY>
+       <ENTRY>Compress</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M06</KEY>
+       <ENTRY>Rename File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M07</KEY>
+       <ENTRY>Duplicate File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M08</KEY>
+       <ENTRY>Delete File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M09</KEY>
+       <ENTRY>Rename Folder</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M10</KEY>
+       <ENTRY>Duplicate Folder</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M11</KEY>
+       <ENTRY>Delete Folder</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M12</KEY>
+       <ENTRY>Uncompress</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M13</KEY>
+       <ENTRY>Transfer Mode</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M14</KEY>
+       <ENTRY>Choose Transfer Mode (Auto/asc/bin)</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M15</KEY>
+       <ENTRY>Refresh</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M16</KEY>
+       <ENTRY>Refresh current folder</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M17</KEY>
+       <ENTRY>Shortcuts</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M18</KEY>
+       <ENTRY>Open path from clipboard</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M19</KEY>
+       <ENTRY>Create folder</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M20</KEY>
+       <ENTRY>Download</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M21</KEY>
+       <ENTRY>Upload</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M22</KEY>
+       <ENTRY>Auto</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M23</KEY>
+       <ENTRY>Ascii (text mode)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>M24</KEY>
+       <ENTRY>Binary mode</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T01</KEY>
+       <ENTRY>Are you sure you want to copy # into # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T02</KEY>
+       <ENTRY>Are you sure you want to move # into # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T03</KEY>
+       <ENTRY>Are you sure you want to uncompress # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T04</KEY>
+       <ENTRY>Are you sure you want to upload # to # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T05</KEY>
+       <ENTRY>Are you sure you want to rename # to # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T06</KEY>
+       <ENTRY>Enter new name</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T07</KEY>
+       <ENTRY>Are you sure you want to duplicate # to # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T08</KEY>
+       <ENTRY>Path sent to clipbard</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T09</KEY>
+       <ENTRY>Are you sure you want to create new folder in # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T10</KEY>
+       <ENTRY>Warning : critical operation</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T11</KEY>
+       <ENTRY>Are you sure you want to delete folder # and all there content ?</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T12</KEY>
+       <ENTRY>Are you sure you want to delete # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T13</KEY>
+       <ENTRY>Are you sure you want to compress # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T14</KEY>
+       <ENTRY>Are you sure you want to download # into # ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>
