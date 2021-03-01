@@ -60,7 +60,7 @@
        <LINE>PROCESS BEFORE OUTPUT.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
-       <LINE>MODULE status_0100.</LINE>
+       <LINE>  MODULE status_0100.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
        <LINE>*</LINE>
@@ -69,20 +69,12 @@
        <LINE>PROCESS AFTER INPUT.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
-       <LINE>MODULE exit_command_0100 AT EXIT-COMMAND.</LINE>
+       <LINE>  MODULE exit_command_0100 AT EXIT-COMMAND.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
        <LINE>*  MODULE user_command_0100.</LINE>
       </RPY_DYFLOW>
      </FLOW_LOGIC>
-     <SPACES>
-      <item>0</item>
-      <item>2</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>0</item>
-     </SPACES>
     </item>
     <item>
      <HEADER>
@@ -133,7 +125,7 @@
        <LINE>PROCESS BEFORE OUTPUT.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
-       <LINE>MODULE STATUS_0200.</LINE>
+       <LINE> MODULE STATUS_0200.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
        <LINE>*</LINE>
@@ -142,21 +134,14 @@
        <LINE>PROCESS AFTER INPUT.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
-       <LINE>MODULE USER_COMMAND_0200.</LINE>
+       <LINE> MODULE USER_COMMAND_0200.</LINE>
       </RPY_DYFLOW>
      </FLOW_LOGIC>
-     <SPACES>
-      <item>0</item>
-      <item>1</item>
-      <item>0</item>
-      <item>0</item>
-      <item>1</item>
-     </SPACES>
     </item>
    </DYNPROS>
    <CUA>
     <ADM>
-     <PFKCODE>000001</PFKCODE>
+     <ACTCODE>1</ACTCODE>
     </ADM>
     <STA>
      <RSMPE_STAT>
@@ -293,11 +278,11 @@
     <TIT>
      <RSMPE_TITT>
       <CODE>TITLE100</CODE>
-      <TEXT>ABAP FTP</TEXT>
+      <TEXT>ABAP FTP &amp;1</TEXT>
      </RSMPE_TITT>
      <RSMPE_TITT>
       <CODE>TITLE200</CODE>
-      <TEXT>Change Attributes</TEXT>
+      <TEXT>Change Attributes &amp;1</TEXT>
      </RSMPE_TITT>
     </TIT>
    </CUA>

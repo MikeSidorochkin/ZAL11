@@ -2469,12 +2469,13 @@ START-OF-SELECTION.
 MODULE status_0100 OUTPUT.
 
   SET PF-STATUS 'SCREEN100'. "Define function EXIT to leave the screen
-  SET TITLEBAR 'TITLE100'.   "ABAP FTP
 
   IF o_container IS INITIAL.
     PERFORM init_auth.
     PERFORM init_screen.
   ENDIF.
+
+  SET TITLEBAR 'TITLE100' WITH w_path.   "ABAP FTP
 ENDMODULE.                 " STATUS_0100  OUTPUT
 
 *&---------------------------------------------------------------------*
@@ -2697,10 +2698,16 @@ FORM init_splitter .
     EXPORTING
       id    = 1
       width = 20.
+
   CALL METHOD o_splitter_l->set_column_width
     EXPORTING
       id    = 1
       width = 20.
+
+CALL METHOD o_splitter->set_row_height
+  EXPORTING
+    id                = 1
+    height            = 0 .
 
 ENDFORM.                    " INIT_SPLITTER
 
@@ -3438,6 +3445,8 @@ FORM refresh_grid_display USING pw_gridnumber TYPE i.
 * Add number of files on sum line
     PERFORM overwrite_total_text.
   ENDIF.
+
+
 ENDFORM.                    " REFRESH_GRID_DISPLAY
 
 *&---------------------------------------------------------------------*
@@ -3810,6 +3819,9 @@ FORM change_remote_folder USING pw_node_key TYPE tv_nodekey.
 * Save change in shared memory
   w_path = ls_node-path.
   EXPORT w_path TO SHARED BUFFER indx(st) ID w_shared_dir_remote.
+
+  SET TITLEBAR 'TITLE100' WITH w_path.   "ABAP FTP
+
 ENDFORM.                    " CHANGE_REMOTE_FOLDER
 
 *&---------------------------------------------------------------------*
@@ -5422,7 +5434,7 @@ FORM save_local_to_remote USING pw_local_path TYPE c
     OPEN DATASET lw_file FOR OUTPUT IN BINARY MODE.
   ELSE.
 * Open in text mode
-    OPEN DATASET lw_file FOR OUTPUT IN TEXT MODE ENCODING NON-UNICODE.
+    OPEN DATASET lw_file FOR OUTPUT IN TEXT MODE ENCODING DEFAULT.
   ENDIF.
   IF sy-subrc <> 0.
 * Error opening the file
