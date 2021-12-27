@@ -338,6 +338,8 @@ DATA :   path(600) TYPE c,
        w_shared_dir_local(30) TYPE c,
        w_shared_dir_remote(30) TYPE c,
        w_path LIKE s_node-path,
+       w_path_local LIKE s_node-path,
+       w_path_appserv LIKE s_node-path,
 
 * CHMOD data
        w_chmod_to_set LIKE s_detail2-mode,
@@ -2475,6 +2477,10 @@ MODULE status_0100 OUTPUT.
     PERFORM init_screen.
   ENDIF.
 
+  o_grid1->set_gridtitle( i_gridtitle = conv #( w_path_local ) ).
+  o_grid2->set_gridtitle( i_gridtitle = conv #( w_path_appserv ) ).
+
+
   SET TITLEBAR 'TITLE100' WITH w_path.   "ABAP FTP
 ENDMODULE.                 " STATUS_0100  OUTPUT
 
@@ -2698,16 +2704,10 @@ FORM init_splitter .
     EXPORTING
       id    = 1
       width = 20.
-
   CALL METHOD o_splitter_l->set_column_width
     EXPORTING
       id    = 1
       width = 20.
-
-CALL METHOD o_splitter->set_row_height
-  EXPORTING
-    id                = 1
-    height            = 0 .
 
 ENDFORM.                    " INIT_SPLITTER
 
@@ -3445,8 +3445,6 @@ FORM refresh_grid_display USING pw_gridnumber TYPE i.
 * Add number of files on sum line
     PERFORM overwrite_total_text.
   ENDIF.
-
-
 ENDFORM.                    " REFRESH_GRID_DISPLAY
 
 *&---------------------------------------------------------------------*
@@ -3622,8 +3620,11 @@ FORM change_local_folder  USING pw_node_key TYPE tv_nodekey.
   PERFORM refresh_grid_display USING 1.
 
 * Save change in shared memory
-  w_path = ls_node-path.
+  w_path_local = w_path = ls_node-path.
   EXPORT w_path TO SHARED BUFFER indx(st) ID w_shared_dir_local.
+
+  o_grid1->set_gridtitle( i_gridtitle = conv #( w_path_local ) ).
+  SET TITLEBAR 'TITLE100' WITH w_path.
 ENDFORM.                    " CHANGE_LOCAL_FOLDER
 
 *&---------------------------------------------------------------------*
@@ -3817,10 +3818,11 @@ FORM change_remote_folder USING pw_node_key TYPE tv_nodekey.
   PERFORM refresh_grid_display USING 2.
 
 * Save change in shared memory
-  w_path = ls_node-path.
+  w_path_appserv = w_path = ls_node-path.
   EXPORT w_path TO SHARED BUFFER indx(st) ID w_shared_dir_remote.
 
   SET TITLEBAR 'TITLE100' WITH w_path.   "ABAP FTP
+  o_grid2->set_gridtitle( i_gridtitle = conv #( w_path_appserv ) ).
 
 ENDFORM.                    " CHANGE_REMOTE_FOLDER
 
@@ -5434,7 +5436,7 @@ FORM save_local_to_remote USING pw_local_path TYPE c
     OPEN DATASET lw_file FOR OUTPUT IN BINARY MODE.
   ELSE.
 * Open in text mode
-    OPEN DATASET lw_file FOR OUTPUT IN TEXT MODE ENCODING DEFAULT.
+    OPEN DATASET lw_file FOR OUTPUT IN TEXT MODE ENCODING NON-UNICODE.
   ENDIF.
   IF sy-subrc <> 0.
 * Error opening the file
