@@ -338,6 +338,8 @@ DATA :   path(600) TYPE c,
        w_shared_dir_local(30) TYPE c,
        w_shared_dir_remote(30) TYPE c,
        w_path LIKE s_node-path,
+       w_path_local LIKE s_node-path,
+       w_path_appserv LIKE s_node-path,
 
 * CHMOD data
        w_chmod_to_set LIKE s_detail2-mode,
@@ -2469,12 +2471,17 @@ START-OF-SELECTION.
 MODULE status_0100 OUTPUT.
 
   SET PF-STATUS 'SCREEN100'. "Define function EXIT to leave the screen
-  SET TITLEBAR 'TITLE100'.   "ABAP FTP
 
   IF o_container IS INITIAL.
     PERFORM init_auth.
     PERFORM init_screen.
   ENDIF.
+
+  o_grid1->set_gridtitle( i_gridtitle = conv #( w_path_local ) ).
+  o_grid2->set_gridtitle( i_gridtitle = conv #( w_path_appserv ) ).
+
+
+  SET TITLEBAR 'TITLE100' WITH w_path.   "ABAP FTP
 ENDMODULE.                 " STATUS_0100  OUTPUT
 
 *&---------------------------------------------------------------------*
@@ -3613,8 +3620,11 @@ FORM change_local_folder  USING pw_node_key TYPE tv_nodekey.
   PERFORM refresh_grid_display USING 1.
 
 * Save change in shared memory
-  w_path = ls_node-path.
+  w_path_local = w_path = ls_node-path.
   EXPORT w_path TO SHARED BUFFER indx(st) ID w_shared_dir_local.
+
+  o_grid1->set_gridtitle( i_gridtitle = conv #( w_path_local ) ).
+  SET TITLEBAR 'TITLE100' WITH w_path.
 ENDFORM.                    " CHANGE_LOCAL_FOLDER
 
 *&---------------------------------------------------------------------*
@@ -3808,8 +3818,12 @@ FORM change_remote_folder USING pw_node_key TYPE tv_nodekey.
   PERFORM refresh_grid_display USING 2.
 
 * Save change in shared memory
-  w_path = ls_node-path.
+  w_path_appserv = w_path = ls_node-path.
   EXPORT w_path TO SHARED BUFFER indx(st) ID w_shared_dir_remote.
+
+  SET TITLEBAR 'TITLE100' WITH w_path.   "ABAP FTP
+  o_grid2->set_gridtitle( i_gridtitle = conv #( w_path_appserv ) ).
+
 ENDFORM.                    " CHANGE_REMOTE_FOLDER
 
 *&---------------------------------------------------------------------*
